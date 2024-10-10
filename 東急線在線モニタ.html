@@ -1222,6 +1222,9 @@
 			if (line == 26001 || line == 26002)
 				if ((no / 100 | 0) in opchar)
 					return ("00" + no).slice(-2) + opchar[no / 100 | 0];
+			if (line == 99310)
+				if ((no / 100 | 0) in opchar)
+					return ("00" + no).slice(-2) + opchar[no / 100 | 0];
 			if (line == 26003 && no < 100)
 				return ("00" + no).slice(-2) + (no < 50 ? "K" : no % 2 == 0 ? "T" : "S");
 			return ("00" + no).slice(no < 10 ? -1 : no < 100 ? -2 : -3);
